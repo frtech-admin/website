@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Code2, Cpu, Rocket } from "lucide-react";
 
 export function Hero() {
@@ -35,9 +36,11 @@ export function Hero() {
           </p>
 
           {/* CTA Button */}
-          <button className="bg-[#3b9aff] hover:bg-[#2a89ef] text-white px-8 py-4 rounded-lg transition-all duration-300 shadow-lg shadow-[#3b9aff]/30 hover:shadow-[#3b9aff]/50 hover:scale-105">
-            Contact Us
-          </button>
+          <Link href="/contact">
+            <button className="bg-[#3b9aff] hover:bg-[#2a89ef] text-white px-8 py-4 rounded-lg transition-all duration-300 shadow-lg shadow-[#3b9aff]/30 hover:shadow-[#3b9aff]/50 hover:scale-105">
+              Contact Us
+            </button>
+          </Link>
 
           {/* Feature Icons */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">

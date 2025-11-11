@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export function CTA() {
@@ -30,10 +31,12 @@ export function CTA() {
           </p>
 
           {/* CTA Button */}
-          <button className="group bg-[#3b9aff] hover:bg-[#2a89ef] text-white px-10 py-5 rounded-lg transition-all duration-300 shadow-lg shadow-[#3b9aff]/30 hover:shadow-[#3b9aff]/50 hover:scale-105 inline-flex items-center gap-3">
-            <span>Get in Touch</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          <Link href="/contact">
+            <button className="group bg-[#3b9aff] hover:bg-[#2a89ef] text-white px-10 py-5 rounded-lg transition-all duration-300 shadow-lg shadow-[#3b9aff]/30 hover:shadow-[#3b9aff]/50 hover:scale-105 inline-flex items-center gap-3">
+              <span>Get in Touch</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </Link>
 
           {/* Contact Info */}
           <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-8 text-gray-400">
