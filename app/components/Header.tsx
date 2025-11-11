@@ -2,10 +2,12 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { X, Menu } from "lucide-react";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -14,6 +16,13 @@ export function Header() {
     { href: "/portfolio", label: "Portfolio" },
     { href: "/contact", label: "Contact" },
   ];
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a1628]/95 backdrop-blur-sm border-b border-white/5">
@@ -30,7 +39,11 @@ export function Header() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="transition-colors text-gray-300 hover:text-[#3b9aff]"
+                  className={`transition-colors ${
+                    isActive(link.href)
+                      ? "text-[#3b9aff]"
+                      : "text-gray-300 hover:text-[#3b9aff]"
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -59,7 +72,11 @@ export function Header() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block transition-colors text-gray-300 hover:text-[#3b9aff]"
+                    className={`block transition-colors ${
+                      isActive(link.href)
+                        ? "text-[#3b9aff]"
+                        : "text-gray-300 hover:text-[#3b9aff]"
+                    }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
