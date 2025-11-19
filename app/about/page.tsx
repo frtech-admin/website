@@ -8,60 +8,54 @@ import { Linkedin, Twitter, Github } from "lucide-react";
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: "Sarah Johnson",
-      title: "CEO & Co-Founder",
-      bio: "Visionary leader with 10+ years in tech strategy. Passionate about empowering startups through innovative software solutions.",
+      name: "Md. Firoj Ahmed",
+      title: "Founder & CEO",
+      bio: "Leading the vision and strategy at FR Tech.",
       image:
-        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=400&fit=crop",
+        "https://ui-avatars.com/api/?name=Md+Firoj+Ahmed&background=random",
+      linkedin: "https://www.linkedin.com/in/md-firoj/",
     },
     {
-      name: "Michael Chen",
-      title: "Lead Developer",
-      bio: "Full-stack architect specializing in scalable web applications. Expert in React, Node.js, and cloud infrastructure.",
-      image:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
+      name: "Nazmul Alom",
+      title: "Senior Tech Advisor",
+      bio: "Guiding technical excellence and innovation.",
+      image: "https://ui-avatars.com/api/?name=Nazmul+Alom&background=random",
+      linkedin: "https://www.linkedin.com/in/nazmul-alom/",
     },
     {
-      name: "Emily Rodriguez",
-      title: "AI/ML Engineer",
-      bio: "Data scientist turning complex algorithms into practical business solutions. PhD in Machine Learning from MIT.",
+      name: "Rashedul Hoque Robin",
+      title: "Software Engineer",
+      bio: "Building robust and scalable software solutions.",
       image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
+        "https://ui-avatars.com/api/?name=Rashedul+Hoque+Robin&background=random",
+      linkedin: "https://www.linkedin.com/in/rh-robin/",
     },
     {
-      name: "David Kim",
-      title: "Head of Design",
-      bio: "Award-winning UX/UI designer creating beautiful, intuitive interfaces. Believes design should be both functional and delightful.",
-      image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+      name: "Shafiul Shafi",
+      title: "Operational Engineer",
+      bio: "Ensuring smooth operations and delivery.",
+      image: "https://ui-avatars.com/api/?name=Shafiul+Shafi&background=random",
     },
     {
-      name: "Priya Sharma",
-      title: "Mobile Developer",
-      bio: "iOS and Android specialist with a track record of building apps used by millions. Loves creating seamless mobile experiences.",
-      image:
-        "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=400&h=400&fit=crop",
+      name: "Musa Mia",
+      title: "UI UX Designer",
+      bio: "Crafting intuitive and beautiful user experiences.",
+      image: "https://ui-avatars.com/api/?name=Musa+Mia&background=random",
+      linkedin: "https://www.linkedin.com/in/musa-mia/",
     },
     {
-      name: "Alex Thompson",
-      title: "DevOps Engineer",
-      bio: "Infrastructure expert ensuring our systems are fast, secure, and scalable. Automation enthusiast and cloud architecture guru.",
+      name: "Ismail hosen hasan",
+      title: "Graphics Designer",
+      bio: "Creating visual identities that stand out.",
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+        "https://ui-avatars.com/api/?name=Ismail+hosen+hasan&background=random",
+      linkedin: "https://www.linkedin.com/in/ismail-hasan-91a83133a/",
     },
     {
-      name: "Lisa Wang",
-      title: "Project Manager",
-      bio: "Agile methodology champion keeping teams aligned and projects on track. Bridge between technical excellence and client vision.",
-      image:
-        "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop",
-    },
-    {
-      name: "James Martinez",
-      title: "QA Lead",
-      bio: "Quality assurance specialist with an eye for detail. Ensures every product we ship meets the highest standards of excellence.",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+      name: "Md Jafor Ullah",
+      title: "Digital Marketing Specialist",
+      bio: "Driving growth and digital presence.",
+      image: "https://ui-avatars.com/api/?name=Md+Jafor+Ullah&background=random",
     },
   ];
 
@@ -193,24 +187,16 @@ export default function AboutPage() {
 
                   {/* Social Icons - appear on hover */}
                   <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href="#"
-                      className="w-8 h-8 bg-[#3b9aff]/90 hover:bg-[#3b9aff] rounded-full flex items-center justify-center transition-colors"
-                    >
-                      <Linkedin className="w-4 h-4 text-white" />
-                    </a>
-                    <a
-                      href="#"
-                      className="w-8 h-8 bg-[#3b9aff]/90 hover:bg-[#3b9aff] rounded-full flex items-center justify-center transition-colors"
-                    >
-                      <Twitter className="w-4 h-4 text-white" />
-                    </a>
-                    <a
-                      href="#"
-                      className="w-8 h-8 bg-[#3b9aff]/90 hover:bg-[#3b9aff] rounded-full flex items-center justify-center transition-colors"
-                    >
-                      <Github className="w-4 h-4 text-white" />
-                    </a>
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 bg-[#3b9aff]/90 hover:bg-[#3b9aff] rounded-full flex items-center justify-center transition-colors"
+                      >
+                        <Linkedin className="w-4 h-4 text-white" />
+                      </a>
+                    )}
                   </div>
                 </div>
 

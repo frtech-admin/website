@@ -18,6 +18,8 @@ export const metadata: Metadata = {
     "Build your future with AI and software solutions. We create custom web, mobile, and AI solutions for ambitious startups and businesses.",
 };
 
+import { Footer } from "./components/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,6 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
