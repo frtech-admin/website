@@ -90,6 +90,14 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-gray-400 hover:text-[#3b9aff] transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
