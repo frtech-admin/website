@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
-import DOMPurify from "isomorphic-dompurify";
+// import nodemailer from "nodemailer";
+// import DOMPurify from "isomorphic-dompurify";
 
 // Force dynamic rendering for this route
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
+/*
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -64,6 +65,7 @@ export async function POST(req: Request) {
     );
   }
 }
+*/
 
 // Simple GET handler to verify the route is active
 export async function GET() {
