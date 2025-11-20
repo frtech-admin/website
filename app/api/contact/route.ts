@@ -65,14 +65,7 @@ export async function POST(req: Request) {
   }
 }
 
-// Handle OPTIONS for CORS preflight
-export async function OPTIONS(req: Request) {
-  return new NextResponse(null, {
-    status: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-    },
-  });
+// Simple GET handler to verify the route is active
+export async function GET() {
+  return NextResponse.json({ message: "Contact API is working" });
 }
