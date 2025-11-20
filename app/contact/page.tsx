@@ -12,11 +12,42 @@ export default function ContactPage() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! We will get back to you soon.");
+    setStatus("loading");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setStatus("success");
+      setFormData({
+        fullName: "",
+        email: "",
+        companyName: "",
+        message: "",
+      });
+      alert("Thank you for your message! We will get back to you soon.");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus("error");
+      alert("Failed to send message. Please try again later.");
+    } finally {
+      setStatus("idle");
+    }
   };
 
   const handleChange = (
@@ -150,9 +181,12 @@ export default function ContactPage() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-[#3b9aff] hover:bg-[#2a89ef] text-white px-8 py-4 rounded-lg transition-all duration-300 shadow-lg shadow-[#3b9aff]/30 hover:shadow-[#3b9aff]/50 hover:scale-105 flex items-center justify-center gap-2"
+                  disabled={status === "loading"}
+                  className="w-full bg-[#3b9aff] hover:bg-[#2a89ef] text-white px-8 py-4 rounded-lg transition-all duration-300 shadow-lg shadow-[#3b9aff]/30 hover:shadow-[#3b9aff]/50 hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <span>Send Message</span>
+                  <span>
+                    {status === "loading" ? "Sending..." : "Send Message"}
+                  </span>
                   <Send className="w-5 h-5" />
                 </button>
               </form>
