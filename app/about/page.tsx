@@ -5,57 +5,63 @@ import { CTA } from "../components/CTA";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Linkedin, Twitter, Github } from "lucide-react";
 
+// Import team member images
+import firojImage from "../assets/images/Md. Firoj Ahmed.jpg";
+import nazmulImage from "../assets/images/Nazmul Alom.jpg";
+import robinImage from "../assets/images/Rashedul Hoque Robin.jpg";
+import shafiImage from "../assets/images/Shafiul Shafi.jpg";
+import musaImage from "../assets/images/Musa Mia.jpg";
+import ismailImage from "../assets/images/Ismail Hosen Hasan.jpg";
+import jaforImage from "../assets/images/Md Jafor Ullah.jpg";
+
 export default function AboutPage() {
   const teamMembers = [
     {
       name: "Md. Firoj Ahmed",
       title: "Founder & CEO",
       bio: "Leading the vision and strategy at FR Tech.",
-      image:
-        "https://ui-avatars.com/api/?name=Md+Firoj+Ahmed&background=random",
+      image: firojImage.src,
       linkedin: "https://www.linkedin.com/in/md-firoj/",
     },
     {
       name: "Nazmul Alom",
       title: "Senior Tech Advisor",
       bio: "Guiding technical excellence and innovation.",
-      image: "https://ui-avatars.com/api/?name=Nazmul+Alom&background=random",
+      image: nazmulImage.src,
       linkedin: "https://www.linkedin.com/in/nazmul-alom/",
     },
     {
       name: "Rashedul Hoque Robin",
       title: "Software Engineer",
       bio: "Building robust and scalable software solutions.",
-      image:
-        "https://ui-avatars.com/api/?name=Rashedul+Hoque+Robin&background=random",
+      image: robinImage.src,
       linkedin: "https://www.linkedin.com/in/rh-robin/",
     },
     {
       name: "Shafiul Shafi",
       title: "Operational Engineer",
       bio: "Ensuring smooth operations and delivery.",
-      image: "https://ui-avatars.com/api/?name=Shafiul+Shafi&background=random",
+      image: shafiImage.src,
     },
     {
       name: "Musa Mia",
       title: "UI UX Designer",
       bio: "Crafting intuitive and beautiful user experiences.",
-      image: "https://ui-avatars.com/api/?name=Musa+Mia&background=random",
+      image: musaImage.src,
       linkedin: "https://www.linkedin.com/in/musa-mia/",
     },
     {
-      name: "Ismail hosen hasan",
+      name: "Ismail Hosen Hasan",
       title: "Graphics Designer",
       bio: "Creating visual identities that stand out.",
-      image:
-        "https://ui-avatars.com/api/?name=Ismail+hosen+hasan&background=random",
+      image: ismailImage.src,
       linkedin: "https://www.linkedin.com/in/ismail-hasan-91a83133a/",
     },
     {
       name: "Md Jafor Ullah",
       title: "Digital Marketing Specialist",
       bio: "Driving growth and digital presence.",
-      image: "https://ui-avatars.com/api/?name=Md+Jafor+Ullah&background=random",
+      image: jaforImage.src,
     },
   ];
 
