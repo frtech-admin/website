@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-// import DOMPurify from "isomorphic-dompurify";
+import DOMPurify from "isomorphic-dompurify";
 
 // Force dynamic rendering for this route
 export const dynamic = 'force-dynamic';
