@@ -23,7 +23,6 @@ export async function POST(req: Request) {
     }
 
     // Check Env Vars
-<<<<<<< HEAD
     // if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
     //   console.error("Missing Environment Variables");
     //   return NextResponse.json(
@@ -31,15 +30,6 @@ export async function POST(req: Request) {
     //     { status: 500 }
     //   );
     // }
-=======
-    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-      console.error("Missing Environment Variables");
-      return NextResponse.json(
-        { error: "Server configuration error" },
-        { status: 500 }
-      );
-    }
->>>>>>> 538c76a783c497895258b7db3fdeca047e2830e0
 
     // Sanitize inputs
     console.log("Sanitizing inputs");
