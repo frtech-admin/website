@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-// import nodemailer from "nodemailer";
+import nodemailer from "nodemailer";
 // import DOMPurify from "isomorphic-dompurify";
 
 // Force dynamic rendering for this route
