@@ -9,8 +9,10 @@ export const runtime = 'nodejs';
 
 export async function POST(req: Request) {
   try {
+    console.log("POST request started");
     const body = await req.json();
     const { fullName, email, companyName, message } = body;
+    console.log("Body parsed");
 
     // Basic validation
     if (!fullName || !email || !message) {
@@ -20,18 +22,30 @@ export async function POST(req: Request) {
       );
     }
 
+    // Check Env Vars
+    // if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+    //   console.error("Missing Environment Variables");
+    //   return NextResponse.json(
+    //     { error: "Server configuration error" },
+    //     { status: 500 }
+    //   );
+    // }
+
     // Sanitize inputs
+    console.log("Sanitizing inputs");
     const sanitizedFullName = DOMPurify.sanitize(fullName);
     const sanitizedEmail = DOMPurify.sanitize(email);
     const sanitizedCompanyName = DOMPurify.sanitize(companyName || "");
     const sanitizedMessage = DOMPurify.sanitize(message);
+    console.log("Inputs sanitized");
 
     // Configure transporter
+    console.log("Configuring transporter");
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD,
+        user: "test@gmail.com", // HARDCODED FOR TESTING
+        pass: "testpassword",   // HARDCODED FOR TESTING
       },
     });
 
@@ -51,7 +65,9 @@ export async function POST(req: Request) {
     };
 
     // Send email
+    console.log("Sending email");
     await transporter.sendMail(mailOptions);
+    console.log("Email sent");
 
     return NextResponse.json(
       { message: "Message sent successfully" },
