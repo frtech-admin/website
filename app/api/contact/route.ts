@@ -11,6 +11,10 @@ export async function POST(req: Request) {
   try {
     console.log("POST request started");
     const body = await req.json();
+    console.log("Body parsed:", body);
+
+    // TEMPORARILY COMMENTED OUT FOR DEBUGGING
+    /*
     const { fullName, email, companyName, message } = body;
     console.log("Body parsed");
 
@@ -51,7 +55,7 @@ export async function POST(req: Request) {
 
     // Email options
     const mailOptions = {
-      from: process.env.GMAIL_USER,
+      from: "test@gmail.com", // HARDCODED FOR TESTING
       to: "frtechltd@gmail.com",
       subject: `New Contact Form Submission from ${sanitizedFullName}`,
       html: `
@@ -68,15 +72,16 @@ export async function POST(req: Request) {
     console.log("Sending email");
     await transporter.sendMail(mailOptions);
     console.log("Email sent");
+    */
 
     return NextResponse.json(
-      { message: "Message sent successfully" },
+      { message: "Debug: Body received successfully" },
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("Error in POST handler:", error);
     return NextResponse.json(
-      { error: "Failed to send message" },
+      { error: "Failed to process request" },
       { status: 500 }
     );
   }
