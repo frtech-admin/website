@@ -14,7 +14,6 @@ export async function POST(req: Request) {
     console.log("Body parsed:", body);
 
     // TEMPORARILY COMMENTED OUT FOR DEBUGGING
-    /*
     const { fullName, email, companyName, message } = body;
     console.log("Body parsed");
 
@@ -72,7 +71,6 @@ export async function POST(req: Request) {
     console.log("Sending email");
     await transporter.sendMail(mailOptions);
     console.log("Email sent");
-    */
 
     return NextResponse.json(
       { message: "Debug: Body received successfully" },
