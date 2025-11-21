@@ -13,26 +13,38 @@ export async function POST(req: Request) {
     const body = await req.json();
     console.log("Body parsed:", body);
 
-    // TEMPORARILY COMMENTED OUT FOR DEBUGGING
     const { fullName, email, companyName, message } = body;
-    console.log("Body parsed");
 
     // Basic validation
     if (!fullName || !email || !message) {
+      console.error("Validation failed: Missing required fields");
       return NextResponse.json(
         { error: "Missing required fields" },
         { status: 400 }
       );
     }
 
-    // Check Env Vars
-    // if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-    //   console.error("Missing Environment Variables");
-    //   return NextResponse.json(
-    //     { error: "Server configuration error" },
-    //     { status: 500 }
-    //   );
-    // }
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      console.error("Validation failed: Invalid email format");
+      return NextResponse.json(
+        { error: "Invalid email format" },
+        { status: 400 }
+      );
+    }
+
+    // Check Environment Variables
+    if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
+      console.error("Missing Environment Variables:", {
+        hasUser: !!process.env.GMAIL_USER,
+        hasPassword: !!process.env.GMAIL_APP_PASSWORD
+      });
+      return NextResponse.json(
+        { error: "Server configuration error. Please contact support." },
+        { status: 500 }
+      );
+    }
 
     // Sanitize inputs
     console.log("Sanitizing inputs");
@@ -47,39 +59,57 @@ export async function POST(req: Request) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "test@gmail.com", // HARDCODED FOR TESTING
-        pass: "testpassword",   // HARDCODED FOR TESTING
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_APP_PASSWORD,
       },
     });
 
+    // Verify transporter configuration
+    try {
+      await transporter.verify();
+      console.log("Transporter verified successfully");
+    } catch (verifyError) {
+      console.error("Transporter verification failed:", verifyError);
+      return NextResponse.json(
+        { error: "Email service configuration error" },
+        { status: 500 }
+      );
+    }
+
     // Email options
     const mailOptions = {
-      from: "test@gmail.com", // HARDCODED FOR TESTING
+      from: process.env.GMAIL_USER,
       to: "frtechltd@gmail.com",
       subject: `New Contact Form Submission from ${sanitizedFullName}`,
       html: `
         <h2>New Contact Message</h2>
         <p><strong>Name:</strong> ${sanitizedFullName}</p>
         <p><strong>Email:</strong> ${sanitizedEmail}</p>
-        <p><strong>Company:</strong> ${sanitizedCompanyName}</p>
+        <p><strong>Company:</strong> ${sanitizedCompanyName || "N/A"}</p>
         <p><strong>Message:</strong></p>
         <p>${sanitizedMessage}</p>
       `,
+      replyTo: sanitizedEmail,
     };
 
     // Send email
     console.log("Sending email");
     await transporter.sendMail(mailOptions);
-    console.log("Email sent");
+    console.log("Email sent successfully");
 
     return NextResponse.json(
-      { message: "Debug: Body received successfully" },
+      { message: "Message sent successfully" },
       { status: 200 }
     );
   } catch (error) {
     console.error("Error in POST handler:", error);
+    
+    // Provide more specific error information
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    console.error("Error details:", errorMessage);
+    
     return NextResponse.json(
-      { error: "Failed to process request" },
+      { error: "Failed to send message. Please try again later." },
       { status: 500 }
     );
   }
