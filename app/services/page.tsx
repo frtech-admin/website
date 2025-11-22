@@ -114,7 +114,7 @@ export default function ServicesPage() {
                 >
                   <div className="flex items-start gap-6">
                     {/* Icon */}
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                       <div className="w-16 h-16 bg-linear-to-br from-[#3b9aff]/20 to-[#3b9aff]/5 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <Icon className="w-8 h-8 text-[#3b9aff]" />
                       </div>
