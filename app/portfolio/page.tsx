@@ -50,7 +50,7 @@ export default function PortfolioPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#0f1f3a] to-[#0a1628]">
+      <section className="relative pt-32 pb-20 overflow-hidden bg-linear-to-br from-[#0a1628] via-[#0f1f3a] to-[#0a1628]">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-20 w-96 h-96 bg-[#3b9aff]/10 rounded-full blur-3xl animate-pulse"></div>
@@ -67,7 +67,7 @@ export default function PortfolioPage() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl text-white mb-6">
               Our{" "}
-              <span className="bg-gradient-to-r from-[#3b9aff] to-[#60d5ff] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#3b9aff] to-[#60d5ff] bg-clip-text text-transparent">
                 Portfolio
               </span>
             </h1>
@@ -81,14 +81,14 @@ export default function PortfolioPage() {
 
       {/* Portfolio Grid Section */}
       <section className="py-20 bg-[#0f1f3a] relative">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
 
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl overflow-hidden hover:border-[#3b9aff]/50 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#3b9aff]/10"
+                className="group bg-linear-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl overflow-hidden hover:border-[#3b9aff]/50 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#3b9aff]/10"
               >
                 {/* Project Image */}
                 <div className="relative h-64 overflow-hidden bg-[#0a1628]">
@@ -98,7 +98,7 @@ export default function PortfolioPage() {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0a1628] via-[#0a1628]/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
 
                   {/* View Project Button - appears on hover */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -131,7 +131,7 @@ export default function PortfolioPage() {
 
           {/* Empty State Message */}
           <div className="mt-16 text-center">
-            <div className="inline-block bg-gradient-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8 max-w-2xl">
+            <div className="inline-block bg-linear-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8 max-w-2xl">
               <div className="w-16 h-16 bg-[#3b9aff]/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -6,7 +6,7 @@ export function Services() {
   return (
     <section className="py-20 bg-[#0f1f3a] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
 
       <div className="container mx-auto px-6">
         {/* Section Title */}
@@ -20,8 +20,8 @@ export function Services() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Web & Mobile Apps */}
-          <div className="group bg-gradient-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8 hover:border-[#3b9aff]/50 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#3b9aff]/20">
-            <div className="w-16 h-16 bg-gradient-to-br from-[#3b9aff]/20 to-[#3b9aff]/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <div className="group bg-linear-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8 hover:border-[#3b9aff]/50 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#3b9aff]/20">
+            <div className="w-16 h-16 bg-linear-to-br from-[#3b9aff]/20 to-[#3b9aff]/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <Smartphone className="w-8 h-8 text-[#3b9aff]" />
             </div>
             <h3 className="text-2xl text-white mb-4">Web & Mobile Apps</h3>
@@ -47,8 +47,8 @@ export function Services() {
           </div>
 
           {/* AI Solutions */}
-          <div className="group bg-gradient-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8 hover:border-[#3b9aff]/50 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#3b9aff]/20">
-            <div className="w-16 h-16 bg-gradient-to-br from-[#3b9aff]/20 to-[#3b9aff]/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <div className="group bg-linear-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8 hover:border-[#3b9aff]/50 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#3b9aff]/20">
+            <div className="w-16 h-16 bg-linear-to-br from-[#3b9aff]/20 to-[#3b9aff]/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <Brain className="w-8 h-8 text-[#3b9aff]" />
             </div>
             <h3 className="text-2xl text-white mb-4">AI Solutions</h3>
@@ -74,8 +74,8 @@ export function Services() {
           </div>
 
           {/* E-commerce & Edu-Tech */}
-          <div className="group bg-gradient-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8 hover:border-[#3b9aff]/50 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#3b9aff]/20">
-            <div className="w-16 h-16 bg-gradient-to-br from-[#3b9aff]/20 to-[#3b9aff]/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <div className="group bg-linear-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8 hover:border-[#3b9aff]/50 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-xl hover:shadow-[#3b9aff]/20">
+            <div className="w-16 h-16 bg-linear-to-br from-[#3b9aff]/20 to-[#3b9aff]/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <ShoppingCart className="w-8 h-8 text-[#3b9aff]" />
             </div>
             <h3 className="text-2xl text-white mb-4">E-commerce & Edu-Tech</h3>

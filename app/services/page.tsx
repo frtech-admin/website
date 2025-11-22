@@ -70,7 +70,7 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#0f1f3a] to-[#0a1628]">
+      <section className="relative pt-32 pb-20 overflow-hidden bg-linear-to-br from-[#0a1628] via-[#0f1f3a] to-[#0a1628]">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-20 w-96 h-96 bg-[#3b9aff]/10 rounded-full blur-3xl animate-pulse"></div>
@@ -87,7 +87,7 @@ export default function ServicesPage() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl text-white mb-6">
               What We{" "}
-              <span className="bg-gradient-to-r from-[#3b9aff] to-[#60d5ff] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#3b9aff] to-[#60d5ff] bg-clip-text text-transparent">
                 Do
               </span>
             </h1>
@@ -101,7 +101,7 @@ export default function ServicesPage() {
 
       {/* Services Grid Section */}
       <section className="py-20 bg-[#0f1f3a] relative">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
 
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
@@ -110,12 +110,12 @@ export default function ServicesPage() {
               return (
                 <div
                   key={index}
-                  className="group bg-gradient-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8 hover:border-[#3b9aff]/50 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-[#3b9aff]/10"
+                  className="group bg-linear-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8 hover:border-[#3b9aff]/50 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-[#3b9aff]/10"
                 >
                   <div className="flex items-start gap-6">
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#3b9aff]/20 to-[#3b9aff]/5 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-16 h-16 bg-linear-to-br from-[#3b9aff]/20 to-[#3b9aff]/5 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <Icon className="w-8 h-8 text-[#3b9aff]" />
                       </div>
                     </div>

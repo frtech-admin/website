@@ -64,7 +64,7 @@ export default function ContactPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#0f1f3a] to-[#0a1628]">
+      <section className="relative pt-32 pb-20 overflow-hidden bg-linear-to-br from-[#0a1628] via-[#0f1f3a] to-[#0a1628]">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-20 w-96 h-96 bg-[#3b9aff]/10 rounded-full blur-3xl animate-pulse"></div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl text-white mb-6">
               Get in{" "}
-              <span className="bg-gradient-to-r from-[#3b9aff] to-[#60d5ff] bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-[#3b9aff] to-[#60d5ff] bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
@@ -95,12 +95,12 @@ export default function ContactPage() {
 
       {/* Contact Section */}
       <section className="py-20 bg-[#0f1f3a] relative">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
 
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Left Column - Contact Form */}
-            <div className="bg-gradient-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8">
+            <div className="bg-linear-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8">
               <h2 className="text-3xl text-white mb-6">Send us a Message</h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -195,7 +195,7 @@ export default function ContactPage() {
             {/* Right Column - Contact Details */}
             <div className="space-y-8">
               {/* Contact Info Cards */}
-              <div className="bg-gradient-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8">
+              <div className="bg-linear-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8">
                 <h2 className="text-3xl text-white mb-6">
                   Contact Information
                 </h2>
@@ -247,7 +247,7 @@ export default function ContactPage() {
               </div>
 
               {/* Map */}
-              <div className="bg-gradient-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl overflow-hidden">
+              <div className="bg-linear-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl overflow-hidden">
                 <div className="h-64 bg-[#0a1628] relative">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.6395799827964!2d-122.08624908469193!3d37.42199997982453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba02425dad8f%3A0x6c296c66619367e0!2sGoogleplex!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
@@ -259,12 +259,12 @@ export default function ContactPage() {
                     referrerPolicy="no-referrer-when-downgrade"
                     className="grayscale contrast-125 opacity-60 hover:opacity-80 transition-opacity"
                   ></iframe>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0a1628] via-transparent to-transparent pointer-events-none"></div>
                 </div>
               </div>
 
               {/* Business Hours */}
-              <div className="bg-gradient-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8">
+              <div className="bg-linear-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-2xl p-8">
                 <h3 className="text-xl text-white mb-4">Business Hours</h3>
                 <div className="space-y-2 text-gray-400">
                   <div className="flex justify-between">
@@ -288,7 +288,7 @@ export default function ContactPage() {
 
       {/* Quick Links Section */}
       <section className="py-20 bg-[#0a1628] relative">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
 
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
@@ -298,19 +298,19 @@ export default function ContactPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="#"
-                className="bg-gradient-to-br from-[#0f1f3a] to-[#0f1f3a]/50 border border-white/10 hover:border-[#3b9aff]/50 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1"
+                className="bg-linear-to-br from-[#0f1f3a] to-[#0f1f3a]/50 border border-white/10 hover:border-[#3b9aff]/50 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1"
               >
                 Schedule a Call
               </a>
               <a
                 href="#"
-                className="bg-gradient-to-br from-[#0f1f3a] to-[#0f1f3a]/50 border border-white/10 hover:border-[#3b9aff]/50 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1"
+                className="bg-linear-to-br from-[#0f1f3a] to-[#0f1f3a]/50 border border-white/10 hover:border-[#3b9aff]/50 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1"
               >
                 View FAQ
               </a>
               <a
                 href="#"
-                className="bg-gradient-to-br from-[#0f1f3a] to-[#0f1f3a]/50 border border-white/10 hover:border-[#3b9aff]/50 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1"
+                className="bg-linear-to-br from-[#0f1f3a] to-[#0f1f3a]/50 border border-white/10 hover:border-[#3b9aff]/50 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:transform hover:-translate-y-1"
               >
                 Live Chat Support
               </a>

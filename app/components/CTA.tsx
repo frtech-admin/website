@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export function CTA() {
   return (
-    <section className="py-20 bg-gradient-to-br from-[#0f1f3a] via-[#1a2f4a] to-[#0f1f3a] relative overflow-hidden">
+    <section className="py-20 bg-linear-to-br from-[#0f1f3a] via-[#1a2f4a] to-[#0f1f3a] relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-[#3b9aff]/10 rounded-full blur-3xl animate-pulse"></div>
@@ -16,7 +16,7 @@ export function CTA() {
       </div>
 
       {/* Top border decoration */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">

@@ -5,7 +5,7 @@ import { Code2, Cpu, Rocket } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0a1628] via-[#0f1f3a] to-[#0a1628]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-[#0a1628] via-[#0f1f3a] to-[#0a1628]">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#3b9aff]/10 rounded-full blur-3xl animate-pulse"></div>
@@ -24,7 +24,7 @@ export function Hero() {
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl text-white mb-6 leading-tight">
             Build Your Future with{" "}
-            <span className="bg-gradient-to-r from-[#3b9aff] to-[#60d5ff] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#3b9aff] to-[#60d5ff] bg-clip-text text-transparent">
               AI and Software
             </span>
           </h1>

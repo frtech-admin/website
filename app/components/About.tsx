@@ -6,7 +6,7 @@ export function About() {
   return (
     <section className="py-20 bg-[#0a1628] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-[#3b9aff]/50 to-transparent"></div>
 
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
@@ -44,7 +44,7 @@ export function About() {
 
           {/* Right Column - Team Photo/Tech Graphic */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#3b9aff]/20 to-transparent rounded-2xl blur-2xl"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-[#3b9aff]/20 to-transparent rounded-2xl blur-2xl"></div>
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
@@ -52,7 +52,7 @@ export function About() {
                 className="w-full h-full object-cover"
               />
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/80 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-[#0a1628]/80 via-transparent to-transparent"></div>
             </div>
           </div>
         </div>
