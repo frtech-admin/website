@@ -19,7 +19,7 @@ export default function AboutPage() {
     {
       name: "Md. Firoj Ahmed",
       title: "Founder & CEO",
-      bio: "Leading the vision and strategy at FR Tech.",
+      bio: "Leading the vision and strategy at FR Tech Ltd.",
       image: firojImage.src,
       linkedin: "https://www.linkedin.com/in/md-firoj/",
     },
@@ -131,7 +131,7 @@ export default function AboutPage() {
 
               <div className="pt-6 grid grid-cols-2 gap-6">
                 <div className="bg-gradient-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-xl p-6">
-                  <div className="text-3xl text-[#3b9aff] mb-2">2018</div>
+                  <div className="text-3xl text-[#3b9aff] mb-2">2025</div>
                   <div className="text-gray-400">Founded</div>
                 </div>
                 <div className="bg-gradient-to-br from-[#0a1628] to-[#0a1628]/50 border border-white/10 rounded-xl p-6">

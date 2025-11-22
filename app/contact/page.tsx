@@ -209,10 +209,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-white mb-1">Email</h3>
                       <a
-                        href="mailto:info@frtech.ltd"
+                        href="mailto:frtechltd@gmail.com"
                         className="text-gray-400 hover:text-[#3b9aff] transition-colors"
                       >
-                        info@frtech.ltd
+                        frtechltd@gmail.com
                       </a>
                     </div>
                   </div>
@@ -228,7 +228,7 @@ export default function ContactPage() {
                         href="tel:1234567890"
                         className="text-gray-400 hover:text-[#3b9aff] transition-colors"
                       >
-                        (123) 456-7890
+                        +8801608911359
                       </a>
                     </div>
                   </div>
@@ -240,7 +240,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-white mb-1">Location</h3>
-                      <p className="text-gray-400">Your City, Your Country</p>
+                      <p className="text-gray-400">Mirpur, Dhaka, Bangladesh</p>
                     </div>
                   </div>
                 </div>
@@ -268,7 +268,7 @@ export default function ContactPage() {
                 <h3 className="text-xl text-white mb-4">Business Hours</h3>
                 <div className="space-y-2 text-gray-400">
                   <div className="flex justify-between">
-                    <span>Monday - Friday</span>
+                    <span>Sunday - Thursday</span>
                     <span className="text-[#3b9aff]">9:00 AM - 6:00 PM</span>
                   </div>
                   <div className="flex justify-between">
@@ -276,7 +276,7 @@ export default function ContactPage() {
                     <span className="text-[#3b9aff]">10:00 AM - 4:00 PM</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Sunday</span>
+                    <span>Friday</span>
                     <span className="text-gray-500">Closed</span>
                   </div>
                 </div>

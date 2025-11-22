@@ -68,7 +68,7 @@ Edit `app/contact/page.tsx`:
 
 // Update phone
 <a href="tel:your-phone-number">
-  (123) 456-7890
+  +8801608911359
 </a>
 ```
 
@@ -179,4 +179,4 @@ npm start
 
 ## Support
 
-For questions or support, visit the contact page or email info@frtech.ltd
+For questions or support, visit the contact page or email frtechltd@gmail.com

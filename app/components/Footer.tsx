@@ -105,9 +105,9 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-6">Contact</h3>
             <ul className="space-y-4 text-gray-400">
-              <li>Dhaka, Bangladesh</li>
-              <li>info@frtech.ltd</li>
-              <li>+880 1234-567890</li>
+              <li>Mirpur, Dhaka, Bangladesh</li>
+              <li>frtechltd@gmail.com</li>
+              <li>+8801608911359</li>
             </ul>
           </div>
         </div>
